@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  margin: 10px;
+}
+
+#book-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+p {
+  margin: 5px 10px;
+}
+
+hr {
+  margin: 5px 10px;
+  width: 200px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+}
+
+.field {
+  margin: 10px;
+  width: 200px;
+}
+
+.button {
+  margin: 10px;
+  width: 75px;
+}
