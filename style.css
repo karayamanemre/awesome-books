@@ -15,7 +15,6 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
 }
 
 p {
@@ -31,7 +30,6 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: left;
 }
 
 .field {
