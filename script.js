@@ -1,5 +1,5 @@
 const addBtn = document.getElementById('add');
-const booksList = [];
+const booksList = JSON.parse(localStorage.getItem('books'));
 
 addBtn.addEventListener('click', (e) => {
   e.preventDefault();
