@@ -22,8 +22,8 @@ class Display {
     `;
 
     list.appendChild(addDiv);
-      document.getElementById('title').value = '';
-      document.getElementById('author').value = '';
+    document.getElementById('title').value = '';
+    document.getElementById('author').value = '';
   }
 
   static addToLocalStorage() {
