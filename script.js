@@ -37,7 +37,7 @@ class Display {
     }
   }
 
-  static From(e) {
+  static removeFromLocalStorage(e) {
     booksList.forEach((newBook, i) => {
       if (e.target.parentElement.lastElementChild.classList.contains(newBook.id)) {
         booksList.splice(i, 1);
