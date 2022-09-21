@@ -11,7 +11,6 @@ body {
   font-family: 'Comic Sans MS', sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   justify-content: stretch;
   height: 100vh;
@@ -109,7 +108,7 @@ h2 {
 
 #book-list .book:nth-child(odd) {
   background: rgba(245, 239, 230, 1);
-  color: rgba(120, 149, 178,1);
+  color: rgba(120, 149, 178, 1);
 }
 
 span {
