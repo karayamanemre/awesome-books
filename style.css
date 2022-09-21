@@ -47,8 +47,8 @@ span {
 }
 
 hr {
-  margin: 5px 10px;
-  width: 200px;
+  margin: 6px 10px;
+  width: 220px;
 }
 
 form {
@@ -80,5 +80,5 @@ input {
 }
 
 .button:hover {
-  background-color: #fff;
+  background-color: white;
 }
