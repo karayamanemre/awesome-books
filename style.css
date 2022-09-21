@@ -7,37 +7,78 @@
   padding: 0;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
 h1 {
   margin: 12px;
 }
 
 #book-list {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: solid 4px black;
+  border-radius: 3px;
+  width: 500px;
+  margin: 15px auto;
+  box-sizing: content-box;
 }
 
-p {
+.book {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#book-list .book:nth-child(odd) {
+  background: #ddd;
+}
+
+span {
   margin: 5px 10px;
 }
 
 hr {
-  margin: 5px 10px;
-  width: 200px;
+  margin: 6px 10px;
+  width: 220px;
 }
 
 form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-end;
 }
 
 .field {
   margin: 10px;
-  width: 200px;
+  width: 300px;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+input {
+  padding: 5px;
+  border: 3px solid #000;
 }
 
 .button {
+  cursor: pointer;
+  background: #ddd;
   margin: 10px;
+  padding: 3px;
   width: 75px;
+  border: 3px solid #000;
+  font-family: 'Comic Sans MS', sans-serif;
+}
+
+.button:hover {
+  background-color: white;
 }
