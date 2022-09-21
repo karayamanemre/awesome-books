@@ -1,4 +1,5 @@
 const booksList = JSON.parse(localStorage.getItem('books'));
+const addBtn = document.getElementById('add');
 
 class Display {
   constructor(title, author) {
@@ -15,12 +16,10 @@ class Display {
     addDiv.classList.add('book');
     const newBook = new Display(Title, Author);
     booksList.push(newBook);
-
     addDiv.innerHTML += `
     <span>"${newBook.title}" by ${newBook.author}</span>
     <button class= "delete button ${newBook.id}">Remove</button>
     `;
-
     list.appendChild(addDiv);
     document.getElementById('title').value = '';
     document.getElementById('author').value = '';
@@ -61,8 +60,6 @@ class Display {
   }
 }
 
-const addBtn = document.getElementById('add');
-
 addBtn.addEventListener('click', (e) => {
   e.preventDefault();
   Display.addBook();
@@ -73,7 +70,6 @@ document.getElementById('book-list').addEventListener('click', (e) => {
   Display.removeBook(e);
   Display.removeFromLocalStorage(e);
 });
-
 window.addEventListener('load', () => {
   Display.keepLocalStorage();
 });
