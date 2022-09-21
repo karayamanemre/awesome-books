@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,20 +7,50 @@
   <title>Awesome Books</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
   <main>
-    <h1>Awesome Books</h1>
-    <div id="book-list"></div>
+    <header>
+      <nav>
+        <p class="brand">Awesome Books</p>
+        <ul class="nav-menu">
+          <li class="nav-links"><a href="#list" id="list-link">List</a></li><span>|</span>
+          <li class="nav-links"><a href="#add" id="add-link">Add New</a><span>|</span></li>
+          <li class="nav-links"><a href="#contact" id="contact-link">Contact</a></li>
+        </ul>
+      </nav>
+      <p id="date">Date</p>
+    </header>
 
-    <h2>Add a new book</h2>
-    <form class="form">
-      <input class="field" type="text" id="title" placeholder="Title">
-      <input class="field" type="text" id="author" placeholder="Author">
-      <input class="button add" type="submit" value="Add" id="add">
-    </form>
+    <section class="list-section" id="list">
+      <h1>All Awesome Books</h1>
+      <div id="book-list"></div>
+    </section>
+
+    <section class="add-section" id="add">
+      <h2>Add a New Book</h2>
+      <form class="form">
+        <input class="field" type="text" id="title" placeholder="Title">
+        <input class="field" type="text" id="author" placeholder="Author">
+        <input class="button add" type="submit" value="Add" id="add-btn">
+      </form>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <h2>Contact Information</h2>
+      <div class="contact-info"></div>
+        <p>Do you have any questions or you just want to say "Hello"?<br>
+          You can reach out to us!</p>
+          <ul>
+            <li class="contact-list-items">Our e-mail: <a href="mailto:">mail@mail.com</a></li>
+            <li class="contact-list-items">Our phone number: <a href="tel:">0123456789</a></li>
+            <li class="contact-list-items">Our adress: Streetname 22, 123456 City, Country</li>
+          </ul>
+      </div>  
+    </section>
   </main>
-  <script src="script.js"></script>
+  <footer>
+    <p>Copyright ...</p>
+  </footer>
+<script src="script.js"></script>
 </body>
-
 </html>

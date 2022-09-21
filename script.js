@@ -1,5 +1,5 @@
 const booksList = [];
-const addBtn = document.getElementById('add');
+const addBtn = document.getElementById('add-btn');
 
 class Display {
   constructor(title, author) {
@@ -40,6 +40,7 @@ class Display {
     booksList.forEach((newBook, i) => {
       if (e.target.parentElement.lastElementChild.classList.contains(newBook.id)) {
         booksList.splice(i, 1);
+        console.log('here');
       }
     });
     localStorage.setItem('books', JSON.stringify(booksList));
@@ -72,4 +73,36 @@ document.getElementById('book-list').addEventListener('click', (e) => {
 });
 window.addEventListener('load', () => {
   Display.keepLocalStorage();
+});
+
+const date = document.getElementById('date');
+const listLink = document.getElementById('list-link');
+const addLink = document.getElementById('add-link');
+const contactLink = document.getElementById('contact-link');
+const listSection = document.querySelector('.list-section');
+const addSection = document.querySelector('.add-section');
+const contactSection = document.querySelector('.contact-section');
+
+function showDateTime() {
+  date.innerHTML = new Date();
+}
+showDateTime();
+setInterval(showDateTime, 1);
+
+listLink.addEventListener('click', () => {
+  listSection.style.display = 'flex';
+  addSection.style.display = 'none';
+  contactSection.style.display = 'none';
+});
+
+addLink.addEventListener('click', () => {
+  listSection.style.display = 'none';
+  addSection.style.display = 'flex';
+  contactSection.style.display = 'none';
+});
+
+contactLink.addEventListener('click', () => {
+  listSection.style.display = 'none';
+  addSection.style.display = 'none';
+  contactSection.style.display = 'flex';
 });
