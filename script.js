@@ -1,4 +1,4 @@
-const booksList = JSON.parse(localStorage.getItem('books'));
+const booksList = [];
 const addBtn = document.getElementById('add');
 
 class Display {
