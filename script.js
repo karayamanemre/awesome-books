@@ -1,5 +1,5 @@
 const booksList = [];
-const addBtn = document.getElementById('add');
+const addBtn = document.getElementById('add-btn');
 
 class Display {
   constructor(title, author) {
@@ -50,6 +50,7 @@ class Display {
     stores.forEach((store) => {
       const addDiv = document.createElement('div');
       addDiv.classList.add('book');
+      booksList.push(store);
       addDiv.innerHTML += `
       <span>"${store.title}" by ${store.author}</span>
       <button class= "delete button ${store.id}">Remove</button>
@@ -72,4 +73,37 @@ document.getElementById('book-list').addEventListener('click', (e) => {
 });
 window.addEventListener('load', () => {
   Display.keepLocalStorage();
+});
+
+const date = document.getElementById('date');
+const listLink = document.getElementById('list-link');
+const addLink = document.getElementById('add-link');
+const contactLink = document.getElementById('contact-link');
+const listSection = document.querySelector('.list-section');
+const addSection = document.querySelector('.add-section');
+const contactSection = document.querySelector('.contact-section');
+
+function showDateTime() {
+  const d = new Date();
+  date.innerHTML = d.toLocaleString('en-GB');
+}
+showDateTime();
+setInterval(showDateTime, 1);
+
+listLink.addEventListener('click', () => {
+  listSection.style.display = 'flex';
+  addSection.style.display = 'none';
+  contactSection.style.display = 'none';
+});
+
+addLink.addEventListener('click', () => {
+  listSection.style.display = 'none';
+  addSection.style.display = 'flex';
+  contactSection.style.display = 'none';
+});
+
+contactLink.addEventListener('click', () => {
+  listSection.style.display = 'none';
+  addSection.style.display = 'none';
+  contactSection.style.display = 'flex';
 });
