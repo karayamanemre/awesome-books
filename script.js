@@ -51,6 +51,7 @@ class Display {
     stores.forEach((store) => {
       const addDiv = document.createElement('div');
       addDiv.classList.add('book');
+      booksList.push(store);
       addDiv.innerHTML += `
       <span>"${store.title}" by ${store.author}</span>
       <button class= "delete button ${store.id}">Remove</button>
@@ -84,7 +85,8 @@ const addSection = document.querySelector('.add-section');
 const contactSection = document.querySelector('.contact-section');
 
 function showDateTime() {
-  date.innerHTML = new Date();
+  let d = new Date();
+  date.innerHTML = d.toLocaleString('en-GB');
 }
 showDateTime();
 setInterval(showDateTime, 1);
