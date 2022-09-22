@@ -2,7 +2,7 @@
 
 # Awesome Books
 
-> 
+> A website that shows a list of books and gives you the option to add or remove books from that list.
 
 ## Built With
 
