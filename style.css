@@ -59,7 +59,8 @@ nav {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
+  align-content: center;
 }
 
 #date {
@@ -171,6 +172,7 @@ input:focus {
   align-items: center;
   justify-content: center;
   color: #062f58;
+  width: 70vw;
 }
 
 .contact-section a {
@@ -178,8 +180,12 @@ input:focus {
 }
 
 .contact-info {
+  display: flex;
   float: left;
-  padding: 15px;
+}
+
+.contact-list {
+  margin-top: 15px;
 }
 
 p {
@@ -189,7 +195,7 @@ p {
 footer {
   width: 70vw;
   background: rgba(245, 239, 230, 1);
-  color: #062F58;
+  color: #062f58;
   border: 1px solid #000;
   border-radius: 5px;
   padding: 10px;
