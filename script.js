@@ -40,7 +40,6 @@ class Display {
     booksList.forEach((newBook, i) => {
       if (e.target.parentElement.lastElementChild.classList.contains(newBook.id)) {
         booksList.splice(i, 1);
-        console.log('here');
       }
     });
     localStorage.setItem('books', JSON.stringify(booksList));
@@ -85,7 +84,7 @@ const addSection = document.querySelector('.add-section');
 const contactSection = document.querySelector('.contact-section');
 
 function showDateTime() {
-  let d = new Date();
+  const d = new Date();
   date.innerHTML = d.toLocaleString('en-GB');
 }
 showDateTime();
