@@ -39,7 +39,7 @@ header {
 }
 
 nav {
-  border: 3px solid #062f58;
+  border: 1px solid #062f58;
   padding: 10px;
   display: flex;
   justify-content: space-between;
@@ -48,6 +48,7 @@ nav {
   background: rgba(120, 149, 178, 1);
   color: rgba(245, 239, 230, 1);
   border-radius: 5px;
+  box-shadow: 0 0 15px 5px rgba(120, 149, 178, 0.34);
 }
 
 .brand {
@@ -88,7 +89,7 @@ h2 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: solid 4px #062f58;
+  border: solid 1px #062f58;
   margin: 15px auto;
   border-radius: 5px;
   box-shadow: 0 0 15px 5px rgba(120, 149, 178, 0.34);
@@ -136,7 +137,7 @@ form {
 
 input {
   padding: 5px;
-  border: 3px solid #000;
+  border: 1px solid #000;
   box-shadow: 0 0 15px 5px rgba(120, 149, 178, 0.34);
   background: rgba(245, 239, 230, 1);
   color: rgba(120, 149, 178, 1);
@@ -144,7 +145,7 @@ input {
 }
 
 input:focus {
-  border: 3px solid #000;
+  border: 1px solid #000;
   background: #fff;
 }
 
@@ -154,7 +155,7 @@ input:focus {
   margin: 10px;
   padding: 3px;
   width: 75px;
-  border: 3px solid #000;
+  border: 1px solid #000;
   font-family: 'Comic Sans MS', sans-serif;
   color: #062f58;
   border-radius: 5px;
@@ -188,11 +189,12 @@ p {
 footer {
   width: 70vw;
   background: rgba(245, 239, 230, 1);
-  border: 3px solid #000;
+  border: 1px solid #000;
   border-radius: 5px;
   padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 15px;
+  box-shadow: 0 0 15px 5px rgba(120, 149, 178, 0.34);
 }
