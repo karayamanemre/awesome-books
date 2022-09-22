@@ -11,7 +11,11 @@ class Display {
   static addBook() {
     const Title = document.getElementById('title').value;
     const Author = document.getElementById('author').value;
-    const list = document.getElementById('book-list');
+    if (Title === '' || Author === '') {
+      document.getElementById('message').innerHTML = "*Please provide a title and author.";
+    } else {
+      document.getElementById('message').innerHTML = "*Book added to the list.";
+      const list = document.getElementById('book-list');
     const addDiv = document.createElement('div');
     addDiv.classList.add('book');
     const newBook = new Display(Title, Author);
@@ -23,6 +27,7 @@ class Display {
     list.appendChild(addDiv);
     document.getElementById('title').value = '';
     document.getElementById('author').value = '';
+    }   
   }
 
   static addToLocalStorage() {
@@ -63,6 +68,8 @@ class Display {
 
 addBtn.addEventListener('click', (e) => {
   e.preventDefault();
+  const bookList = document.getElementById('book-list');
+  bookList.style.display = 'flex';
   Display.addBook();
   Display.addToLocalStorage();
 });
@@ -73,6 +80,12 @@ document.getElementById('book-list').addEventListener('click', (e) => {
 });
 window.addEventListener('load', () => {
   Display.keepLocalStorage();
+  const bookList = document.getElementById('book-list');
+  if (bookList.innerHTML === '') {
+    bookList.style.display = 'none';
+  } else {
+    bookList.style.display = 'flex';
+  }
 });
 
 const date = document.getElementById('date');
@@ -97,6 +110,7 @@ listLink.addEventListener('click', () => {
 });
 
 addLink.addEventListener('click', () => {
+  document.getElementById('message').innerHTML = "";
   listSection.style.display = 'none';
   addSection.style.display = 'flex';
   contactSection.style.display = 'none';

@@ -29,10 +29,13 @@
     <section class="add-section" id="add">
       <h2>Add a New Book</h2>
       <form class="form">
-        <input class="field" type="text" id="title" placeholder="Title">
-        <input class="field" type="text" id="author" placeholder="Author">
+        <label for="title">Book Title</label>
+        <input class="field" type="text" id="title" placeholder="Title" required>
+        <label for="author">Book Author</label>
+        <input class="field" type="text" id="author" placeholder="Author" required>
         <input class="button add" type="submit" value="Add" id="add-btn">
       </form>
+      <p id="message"></p>
     </section>
 
     <section class="contact-section" id="contact">

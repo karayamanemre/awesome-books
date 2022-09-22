@@ -86,7 +86,7 @@ h2 {
 
 #book-list {
   width: 70vw;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -130,6 +130,10 @@ form {
   align-items: flex-end;
 }
 
+label {
+  display: none;
+}
+
 .field {
   margin: 10px;
   width: 300px;
@@ -148,6 +152,12 @@ input {
 input:focus {
   border: 1px solid #000;
   background: #fff;
+}
+
+#message {
+  margin: 10px;
+  font-size: 1rem;
+  color: #062f58;
 }
 
 .button {
