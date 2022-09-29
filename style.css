@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
+
 *,
 *::before,
 *::after {
@@ -8,7 +10,7 @@
 }
 
 body {
-  font-family: 'Comic Sans MS', sans-serif;
+  font-family: 'Courier Prime', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,7 +139,7 @@ label {
 .field {
   margin: 10px;
   width: 300px;
-  font-family: 'Comic Sans MS', sans-serif;
+  font-family: 'Courier Prime', sans-serif;
 }
 
 input {
@@ -167,7 +169,7 @@ input:focus {
   padding: 3px;
   width: 75px;
   border: 1px solid #000;
-  font-family: 'Comic Sans MS', sans-serif;
+  font-family: 'Courier Prime', sans-serif;
   color: #062f58;
   border-radius: 5px;
 }
